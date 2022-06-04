@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>
+                    🧙 Which one of these is not an offensive spell?
+                </h3>
+                <button id="q1" onclick="checkQuestionOne(false, id)">Confringo</button>
+                <button id="q3"onclick="checkQuestionOne(false, id)">Petrificus Totalus</button>
+                <button id="q4"onclick="checkQuestionOne(false, id)">Levicorpus</button>
+                <button id="q5"onclick="checkQuestionOne(false, id)">Reducto</button>
+                <button id="q2"onclick="checkQuestionOne(true, id)">Expelliarmus</button>
+                <button id="q6"onclick="checkQuestionOne(false, id)">Tarantallegra</button>
+                <p id="result1"></p>
+            </div>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>
+                    🗺️ What is the phrase that activates the Marauder's map?
+                </h3>
+                <!-- TODO: Add free response question here -->
+                <form>
+                    <input autocomplete="off" type="text" id="answer">
+                    <button type="button" onclick="checkQuestionTwo(document.querySelector('#answer').value)">Check Answer</button>
+                </form>
+                <p id="result2"></p>
+            </div>
+        </div>
+    </body>
+</html>
