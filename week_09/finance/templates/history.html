@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+    <main class="container py-5 text-center">
+
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th class="text-start">Symbol</th>
+                    <th class="text-end">Shares</th>
+                    <th class="text-end">Price</th>
+                    <th class="text-end">Transacted</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in transactions %}
+                <tr>
+                    <td class="text-start">{{ item.symbol  }}</td>
+                    <td class="text-end">{{ item.shares }}</td>
+                    <td class="text-end">{{ item.share_price }}</td>
+                    <td class="text-end">{{ item.transaction_datetime }}</td>
+                </tr>
+                {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    {% endblock %}
